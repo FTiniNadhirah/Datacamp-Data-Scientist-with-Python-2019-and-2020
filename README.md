@@ -4,3 +4,7 @@ This is about learning data scientist with Python 2019 courses in DataCamp. All 
 Data Scientist with Python track
 
 Datacamp website: https://www.datacamp.com/home
+
+
+
+© 2019 Fatini Nadhirah
