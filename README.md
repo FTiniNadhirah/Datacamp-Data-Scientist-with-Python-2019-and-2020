@@ -7,4 +7,4 @@ Datacamp website: https://www.datacamp.com/home
 
 
 
-© 2019 Fatini Nadhirah
+© 2019 Fatini Nadhirah. All right reserved
