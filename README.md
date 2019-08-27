@@ -21,11 +21,17 @@ Datacamp website: https://www.datacamp.com/home
   - [Python Data Science Toolbox (Part 2)](https://github.com/FatiniNadhirah5/Datacamp-Data-Scientist-with-Python-2019/tree/master/Python%20Data%20Science%20Toolbox%20(Part%202))
   - [pandas Foundations](https://github.com/FatiniNadhirah5/Datacamp-Data-Scientist-with-Python-2019/tree/master/pandas%20Foundations)
   
-  ### Bonus
+  # Bonus
   
   - [Natural Language Processing Fundamentals in Python](https://github.com/FatiniNadhirah5/Datacamp-Data-Scientist-with-Python-2019/tree/master/Natural%20Language%20Processing%20Fundamentals%20in%20Python)
 
+  # Like it? 
+  Please click Star to support us.
   
+  # Useful?
+  Please click Fork to save it.
+  
+  # Goodluck!
 
 
 
