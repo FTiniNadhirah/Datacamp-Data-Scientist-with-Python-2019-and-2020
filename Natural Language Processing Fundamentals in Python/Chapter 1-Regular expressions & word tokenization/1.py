@@ -4,9 +4,7 @@
 # Note: It's important to prefix your regex patterns with r to ensure that your patterns are interpreted in the way you want them to. Else, you may encounter problems to do with escape sequences in strings. For example, "\n" in Python is used to indicate a new line, but if you use the r prefix, it will be interpreted as the raw string "\n" - that is, the character "\" followed by the character "n" - and not as a new line.
 
 # Instructions
-# 100 XP
-# Instructions
-# 100 XP
+
 # Import the regular expression module re.
 # Split my_string on each sentence ending. To do this:
 # Write a pattern called sentence_endings to match sentence endings (., ?, and !).
