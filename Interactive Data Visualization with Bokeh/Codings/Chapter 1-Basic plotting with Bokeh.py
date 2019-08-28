@@ -272,3 +272,100 @@ p.circle(x='Year', y='Time', color='color', size=8, source=source)
 # Specify the name of the output file and show the result
 output_file('sprint.html')
 show(p)
+
+# Exercise
+# Selection and non-selection glyphs
+# In this exercise, you're going to add the box_select tool to a figure and change the selected and non-selected circle glyph properties so that selected glyphs are red and non-selected glyphs are transparent blue.
+
+# You'll use the ColumnDataSource object of the Olympic Sprint dataset you made in the last exercise. It is provided to you with the name source.
+
+# After you have created the figure, be sure to experiment with the Box Select tool you added! As in previous exercises, you may have to scroll down to view the lower portion of the figure.
+
+# Instructions
+
+# Create a figure p with an x-axis label of 'Year', y-axis label of 'Time', and the 'box_select' tool. To add the 'box_select' tool, you have to specify the keyword argument tools='box_select' inside the figure() function.
+# Now that you have added 'box_select' to p, add in circle glyphs with p.circle() such that the selected glyphs are red and non-selected glyphs are transparent blue. This can be done by specifying 'red' as the argument to selection_color and 0.1 to nonselection_alpha. Remember to also pass in the arguments for the x ('Year'), y ('Time'), and source parameters of p.circle().
+# Click 'Submit Answer' to output the file and show the figure.
+# Create a figure with the "box_select" tool: p
+p = figure(x_axis_label='Year',y_axis_label='Time',tools='box_select')
+
+# Add circle glyphs to the figure p with the selected and non-selected properties
+p.circle(x='Year',y='Time',selection_color='red',nonselection_alpha=0.1,source=source)
+
+# Specify the name of the output file and show the result
+output_file('selection_glyph.html')
+show(p)
+
+# Exercise
+# Hover glyphs
+# Now let's practice using and customizing the hover tool.
+
+# In this exercise, you're going to plot the blood glucose levels for an unknown patient. The blood glucose levels were recorded every 5 minutes on October 7th starting at 3 minutes past midnight.
+
+# The date and time of each measurement are provided to you as x and the blood glucose levels in mg/dL are provided as y.
+
+# A bokeh figure is also provided in the workspace as p.
+
+# Your job is to add a circle glyph that will appear red when the mouse is hovered near the data points. You will also add a customized hover tool object to the plot.
+
+# When you're done, play around with the hover tool you just created! Notice how the points where your mouse hovers over turn red.
+
+# Instructions
+
+# Import HoverTool from bokeh.models.
+# Add a circle glyph to the existing figure p for x and y with a size of 10, fill_color of 'grey', alpha of 0.1, line_color of None, hover_fill_color of 'firebrick', hover_alpha of 0.5, and hover_line_color of 'white'.
+# Use the HoverTool() function to create a HoverTool called hover with tooltips=None and mode='vline'.
+# Add the HoverTool hover to the figure p using the p.add_tools() function.
+# import the HoverTool
+from bokeh.models import HoverTool
+
+# Add circle glyphs to figure p
+p.circle(x, y, size=10,
+         fill_color='grey', alpha=0.1, line_color=None,
+         hover_fill_color='firebrick', hover_alpha=0.5,
+         hover_line_color='white')
+
+# Create a HoverTool: hover
+hover = HoverTool(tooltips=None,mode='vline')
+
+# Add the hover tool to the figure p
+p.add_tools(hover)
+
+# Specify the name of the output file and show the result
+output_file('hover_glyph.html')
+show(p)
+
+# Exercise
+# Colormapping
+# The final glyph customization we'll practice is using the CategoricalColorMapper to color each glyph by a categorical property.
+
+# Here, you're going to use the automobile dataset to plot miles-per-gallon vs weight and color each circle glyph by the region where the automobile was manufactured.
+
+# The origin column will be used in the ColorMapper to color automobiles manufactured in the US as blue, Europe as red and Asia as green.
+
+# The automobile data set is provided to you as a Pandas DataFrame called df. The figure is provided for you as p.
+
+# Instructions
+
+# Import CategoricalColorMapper from bokeh.models.
+# Convert the DataFrame df to a ColumnDataSource called source. This has already been done for you.
+# Make a CategoricalColorMapper object called color_mapper with the CategoricalColorMapper() function. It has two parameters here: factors and palette.
+# Add a circle glyph to the figure p to plot 'mpg' (on the y-axis) vs 'weight' (on the x-axis). Remember to pass in source and 'origin' as arguments to source and legend. For the color parameter, use dict(field='origin', transform=color_mapper).
+#Import CategoricalColorMapper from bokeh.models
+from bokeh.models import CategoricalColorMapper
+
+# Convert df to a ColumnDataSource: source
+source = ColumnDataSource(df)
+
+# Make a CategoricalColorMapper object: color_mapper
+color_mapper = CategoricalColorMapper(factors=['Europe', 'Asia', 'US'],
+                                      palette=['red', 'green', 'blue'])
+
+# Add a circle glyph to the figure p
+p.circle('weight', 'mpg', source=source,
+            color=dict(field='origin', transform=color_mapper),
+            legend='origin')
+
+# Specify the name of the output file and show the result
+output_file('colormap.html')
+show(p)
