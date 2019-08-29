@@ -1,7 +1,7 @@
 # Data-Scientist-with-Python-Datacamp
-This is about learning data scientist with Python 2019 courses in DataCamp. All the answers given written by myself
+This is about learning data scientist with Python 2019 courses in DataCamp. All the answers given written by myself.
 
-Data Scientist with Python track
+# All notes, datasets and codings are stored in this repositories
 
 Datacamp website: https://www.datacamp.com/home
 
@@ -21,6 +21,8 @@ Datacamp website: https://www.datacamp.com/home
   - [Python Data Science Toolbox (Part 2)](https://github.com/FatiniNadhirah5/Datacamp-Data-Scientist-with-Python-2019/tree/master/Python%20Data%20Science%20Toolbox%20(Part%202))
   - [pandas Foundations](https://github.com/FatiniNadhirah5/Datacamp-Data-Scientist-with-Python-2019/tree/master/pandas%20Foundations)
   - [Interactive Data Visualization with Bokeh](https://github.com/FatiniNadhirah5/Datacamp-Data-Scientist-with-Python-2019/tree/master/Interactive%20Data%20Visualization%20with%20Bokeh)
+  - [Statistical Thinking in Python (Part 1)](https://github.com/FatiniNadhirah5/Datacamp-Data-Scientist-with-Python-2019/tree/master/Statistical%20Thinking%20in%20Python%20(Part%201))
+  
   # Bonus
   
   - [Natural Language Processing Fundamentals in Python](https://github.com/FatiniNadhirah5/Datacamp-Data-Scientist-with-Python-2019/tree/master/Natural%20Language%20Processing%20Fundamentals%20in%20Python)
