@@ -140,3 +140,60 @@ $ man tail | cat
 # Instructions 2/2
 # Use tail with the flag -n +7 to display all but the first six lines of seasonal/spring.csv.
 $ tail -n +7 seasonal/spring.csv
+
+# Exercise
+# How can I repeat commands?
+# One of the biggest advantages of using the shell is that it makes it easy for you to do things over again. If you run some commands, you can then press the up-arrow key to cycle back through them. You can also use the left and right arrow keys and the delete key to edit them. Pressing return will then run the modified command.
+
+# Even better, history will print a list of commands you have run recently. Each one is preceded by a serial number to make it easy to re-run particular commands: just type !55 to re-run the 55th command in your history (if you have that many). You can also re-run a command by typing an exclamation mark followed by the command's name, such as !head or !cut, which will re-run the most recent use of that command.
+
+# Instructions 1/5
+# Run head summer.csv in your home directory (which should fail).
+
+$ head summer.csv
+
+# Instructions 2/5
+# Change directory to seasonal.
+
+$ cd seasonal
+
+# Instructions 3/5
+# Re-run the head command with !head.
+
+$ !head
+
+# Instructions 4/5
+# Use history to look at what you have done.
+
+$ history
+
+# Instructions 5/5
+# Re-run head again using ! followed by a command number.
+
+$ !head
+
+# Exercise
+# How can I select lines containing specific values?
+# head and tail select rows, cut selects columns, and grep selects lines according to what they contain. In its simplest form, grep takes a piece of text followed by one or more filenames and prints all of the lines in those files that contain that text. For example, grep bicuspid seasonal/winter.csv prints lines from winter.csv that contain "bicuspid".
+
+# grep can search for patterns as well; we will explore those in the next course. What's more important right now is some of grep's more common flags:
+
+# -c: print a count of matching lines rather than the lines themselves
+# -h: do not print the names of files when searching multiple files
+# -i: ignore case (e.g., treat "Regression" and "regression" as matches)
+# -l: print the names of files that contain matches, not the matches
+# -n: print line numbers for matching lines
+# -v: invert the match, i.e., only show lines that don't match
+
+# Instructions 1/3
+
+# Print the contents of all of the lines containing the word molar in seasonal/autumn.csv by running a single command while in your home directory. Don't use any flags.
+$ grep molar seasonal/autumn.csv
+
+# Instructions 2/3
+# Invert the match to find all of the lines that don't contain the word molar in seasonal/spring.csv, and show their line numbers. Remember, it's considered good style to put all of the flags before other values like filenames or the search term "molar".
+$ grep -v -n molar seasonal/spring.csv
+
+# Instructions 3/3
+# Count how many lines contain the word incisor in autumn.csv and winter.csv combined. (Again, run a single command from your home directory.)
+$ grep -c -n incisor seasonal/autumn.csv seasonal/winter.csv
