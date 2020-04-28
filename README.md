@@ -1,5 +1,5 @@
 # Data-Scientist-with-Python-Datacamp
-This is about learning data scientist with Python 2019 courses in DataCamp. All the answers given written by myself.
+This is about learning data scientist with Python 2019 and some new updated courses in DataCamp. All the answers given written by myself.
 
 # All notes, datasets and codings are stored in this repositories
 
